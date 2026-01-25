@@ -294,7 +294,7 @@
     <!-- Hero Section -->
     <section class="hero-section text-white text-center">
         <div class="container hero-content" data-aos="fade-up">
-            <h5 class="text-uppercase letter-spacing-2 mb-3">Selamat Datang di <?= esc($settings['nama_tpu'] ?? $settings['site_title'] ?? 'SI-MAKAM') ?></h5>
+
             <h1 class="display-3 mb-4 fw-bold"><?= esc($hero['judul'] ?? 'Solusi Pemakaman Terpercaya') ?></h1>
             <p class="lead mb-5 mx-auto" style="max-width: 700px;"><?= esc($hero['subjudul'] ?? 'Memberikan pelayanan terbaik dengan penuh kehormatan dan ketenangan bagi keluarga dan orang terkasih.') ?></p>
             <div class="d-flex gap-3 justify-content-center">
