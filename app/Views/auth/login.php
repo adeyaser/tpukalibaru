@@ -150,6 +150,25 @@
             color: #718096;
             font-size: 0.9rem;
         }
+
+        /* Mobile Responsiveness Fixes */
+        @media (max-width: 480px) {
+            .login-card {
+                margin: 0 10px;
+                width: calc(100% - 20px);
+            }
+            .login-body {
+                padding: 1.5rem;
+            }
+            .login-header {
+                padding: 2rem 1.5rem;
+            }
+            /* Adjust Turnstile container */
+            .cf-turnstile {
+                transform: scale(0.9);
+                transform-origin: left top;
+            }
+        }
     </style>
 </head>
 <body>
