@@ -295,6 +295,11 @@ class TagihanKeluarga extends BaseController
         ];
 
         // PDF Generation
+        // Clean any output buffer to prevent PDF corruption
+        if (ob_get_length()) {
+            ob_end_clean();
+        }
+        
         $options = new Options();
         $options->set('isRemoteEnabled', true);
         $dompdf = new Dompdf($options);
