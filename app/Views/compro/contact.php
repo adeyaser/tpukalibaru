@@ -23,8 +23,8 @@
                 <p class="text-muted mb-4">Silakan hubungi kami melalui kontak di bawah ini atau kunjungi kantor kami untuk informasi lebih lanjut.</p>
                 
                 <div class="d-flex mb-4">
-                    <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                        <i class="bi bi-geo-alt fs-5"></i>
+                    <div class="flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        <img src="<?= base_url('assets/img/logo-bekasi.jpg') ?>" alt="Logo Bekasi" class="img-fluid" style="max-height: 50px;">
                     </div>
                     <div class="ms-3">
                         <h6 class="fw-bold mb-1">Alamat</h6>

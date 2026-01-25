@@ -20,6 +20,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<?= base_url('assets/img/logo-bekasi.jpg') ?>" type="image/x-icon">
     
     <style>
         :root {
@@ -242,7 +244,7 @@
                     <h5 class="text-white mb-4">Kontak Kami</h5>
                     <ul class="list-unstyled text-white-50">
                         <li class="mb-3 d-flex gap-3">
-                            <i class="bi bi-geo-alt text-gold mt-1"></i>
+                            <img src="<?= base_url('assets/img/logo-bekasi.jpg') ?>" alt="Logo Bekasi" style="width: 24px; height: 30px; object-fit: contain;" class="mt-1">
                             <span><?= nl2br(esc((string)($contact['alamat'] ?? $settings['alamat_tpu'] ?? 'Menara 165, Bekasi'))) ?></span>
                         </li>
                         <li class="mb-3 d-flex gap-3">
