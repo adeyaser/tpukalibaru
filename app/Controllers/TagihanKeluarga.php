@@ -295,8 +295,8 @@ class TagihanKeluarga extends BaseController
         ];
 
         // PDF Generation
-        // Clean any output buffer to prevent PDF corruption
-        if (ob_get_length()) {
+        // Clean all output buffers to prevent PDF corruption
+        while (ob_get_level() > 0) {
             ob_end_clean();
         }
         
