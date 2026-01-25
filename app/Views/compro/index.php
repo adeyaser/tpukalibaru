@@ -36,7 +36,7 @@
         }
 
         .hero-content h1 {
-            font-size: 5rem;
+            font-size: clamp(2.5rem, 5vw, 5rem);
             margin-bottom: 1rem;
             color: #ffffff;
             /* White text with Black Border (Stroke effect via Shadow) */
@@ -46,8 +46,10 @@
                -2px  2px 0 #000,
                 2px  2px 0 #000,
                 0 5px 15px rgba(0,0,0,0.5);
-            letter-spacing: -2px;
+            letter-spacing: -1px;
             font-weight: 800;
+            line-height: 1.2;
+            word-wrap: break-word;
         }
         
         .hero-content h5 {
@@ -62,13 +64,15 @@
         }
         
         .hero-content p {
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 2vw, 1.5rem);
             max-width: 800px;
             margin: 0 auto 2.5rem;
             color: #f8f9fa;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
             font-weight: 400;
             letter-spacing: 0.5px;
+            line-height: 1.6;
+            padding: 0 15px;
         }
         
         .btn-hero {
@@ -105,6 +109,12 @@
         /* Section Styling */
         .section-padding {
             padding: 120px 0; /* More breathing room */
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 60px 0;
+            }
         }
         
         .section-title {
@@ -150,6 +160,13 @@
             position: relative;
             z-index: 10;
             padding-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-section {
+                margin-top: 0;
+                padding-top: 40px;
+            }
         }
         
         .stat-card {
@@ -207,6 +224,16 @@
             height: 500px;
             object-fit: cover;
             filter: brightness(95%) contrast(105%);
+        }
+        
+        @media (max-width: 768px) {
+            .about-image img {
+                height: 300px;
+                margin-bottom: 2rem;
+            }
+            .about-image {
+                box-shadow: 10px 10px 0 var(--accent), 0 0 30px rgba(0,0,0,0.1);
+            }
         }
         
         /* Services - Clean & Minimal */
@@ -727,11 +754,27 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero-content h1 {
-                font-size: 2.5rem;
+                /* Font size handled by clamp() above */
+                line-height: 1.1;
             }
             
             .section-title {
-                font-size: 2rem;
+                /* Font size handled by clamp/media query above */
+                margin-bottom: 0.5rem;
+            }
+
+            .navbar-custom {
+                background: rgba(255, 255, 255, 0.95); /* Always solid on mobile */
+                padding: 1rem 0;
+            }
+            .navbar-brand-custom {
+                color: var(--primary-dark) !important;
+            }
+            .navbar-custom .nav-link {
+                color: var(--text-dark) !important;
+            }
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
             }
         }
     </style>
