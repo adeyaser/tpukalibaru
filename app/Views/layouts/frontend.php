@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="<?= esc($settings['site_description'] ?? $settings['nama_tpu'] ?? 'SI-MAKAM') ?> - Tempat Peristirahatan Terakhir yang Damai dan Terhormat">
+
     <title><?= isset($title) ? esc($title) . ' - ' : '' ?><?= esc($settings['site_title'] ?? $settings['nama_tpu'] ?? 'SI-MAKAM') ?></title>
     
     <!-- Bootstrap 5 CSS -->
