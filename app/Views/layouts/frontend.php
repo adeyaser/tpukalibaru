@@ -49,6 +49,12 @@
             color: var(--text-dark);
             line-height: 1.8;
             background-color: var(--soft-bg);
+            overflow-x: hidden; /* Force hide horizontal overflow */
+            width: 100%;
+            position: relative;
+        }
+        
+        html {
             overflow-x: hidden;
         }
         
