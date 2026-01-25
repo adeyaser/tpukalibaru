@@ -74,6 +74,22 @@
             background: var(--primary-light);
         }
 
+        /* Global Responsive Fixes */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll !important; /* Fix mobile jitter */
+            }
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
         /* Navbar */
         .navbar-custom {
             background: transparent;
