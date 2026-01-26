@@ -12,16 +12,16 @@
 <div class="row">
     <div class="col-lg-8">
         <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-            <div class="card-header bg-white border-bottom p-4">
+            <div class="card-header bg-primary text-white border-bottom p-4">
                 <div class="d-flex justify-content-between align-items-start">
                     <div>
-                        <h5 class="fw-bold mb-1"><?= esc($message['subject']) ?></h5>
-                        <p class="text-muted small mb-0">
-                            Dari: <span class="text-dark fw-medium"><?= esc($message['nama']) ?></span> (&lt;<?= esc($message['email']) ?>&gt;)
+                        <h5 class="fw-bold mb-1 text-white"><?= esc($message['subject']) ?></h5>
+                        <p class="mb-0 text-white-50 small">
+                            Dari: <span class="fw-medium text-white"><?= esc($message['nama']) ?></span> (&lt;<?= esc($message['email']) ?>&gt;)
                         </p>
                     </div>
                     <div class="text-end">
-                        <span class="text-muted small"><?= date('d M Y, H:i', strtotime($message['created_at'])) ?></span>
+                        <span class="small text-white-50"><?= date('d M Y, H:i', strtotime($message['created_at'])) ?></span>
                     </div>
                 </div>
             </div>
