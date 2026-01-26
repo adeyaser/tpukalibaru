@@ -19,6 +19,22 @@
             <?= csrf_field() ?>
             
             <div class="row">
+                <div class="col-md-12">
+                     <div class="mb-3">
+                        <label class="form-label">Logo Website</label>
+                        <input type="file" name="site_logo" class="form-control" accept="image/*">
+                        <small class="text-muted">Format: JPG, PNG. Maks: 2MB.</small>
+                        <?php if (!empty($settings['site_logo'])): ?>
+                            <div class="mt-2">
+                                <p class="mb-1 text-sm text-muted">Logo saat ini:</p>
+                                <img src="<?= base_url('uploads/settings/' . $settings['site_logo']) ?>" alt="Logo" height="50" class="border rounded p-1">
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label class="form-label">Nama Website</label>
