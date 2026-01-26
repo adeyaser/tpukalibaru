@@ -30,6 +30,17 @@ class Settings extends BaseController
         if ($logo && $logo->isValid() && !$logo->hasMoved()) {
             $newName = $logo->getRandomName();
             $logo->move('uploads/settings', $newName);
+            
+            // Standardize Image Size
+            try {
+                $image = \Config\Services::image();
+                $image->withFile('uploads/settings/' . $newName)
+                      ->resize(300, 100, true, 'height') // Resize to max height 100px, maintain aspect ratio
+                      ->save('uploads/settings/' . $newName);
+            } catch (\Exception $e) {
+                // Ignore if not an image or library fails, just use original
+            }
+
             $this->settingModel->saveSetting('site_logo', $newName, 'general', 'image');
         }
 

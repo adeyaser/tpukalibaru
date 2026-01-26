@@ -27,7 +27,7 @@
                         <?php if (!empty($settings['site_logo'])): ?>
                             <div class="mt-2">
                                 <p class="mb-1 text-sm text-muted">Logo saat ini:</p>
-                                <img src="<?= base_url('uploads/settings/' . $settings['site_logo']) ?>" alt="Logo" height="50" class="border rounded p-1">
+                                <img src="<?= base_url('uploads/settings/' . $settings['site_logo']) ?>" alt="Logo" style="max-height: 80px; width: auto;" class="border rounded p-1 bg-light">
                             </div>
                         <?php endif; ?>
                     </div>

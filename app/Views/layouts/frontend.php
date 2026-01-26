@@ -188,7 +188,7 @@
         <div class="container">
             <a class="navbar-brand navbar-brand-custom" href="<?= base_url() ?>">
                 <?php if (!empty($settings['site_logo'])): ?>
-                    <img src="<?= base_url('uploads/settings/' . $settings['site_logo']) ?>" height="40" alt="Logo">
+                    <img src="<?= base_url('uploads/settings/' . $settings['site_logo']) ?>" alt="Logo" style="max-height: 40px; width: auto;">
                 <?php else: ?>
                     <i class="bi bi-tree-fill text-gold"></i>
                 <?php endif; ?>
@@ -231,7 +231,7 @@
                 <div class="col-lg-4 col-md-6">
                     <h4 class="mb-4 font-playfair footer-brand">
                         <?php if (!empty($settings['site_logo'])): ?>
-                            <img src="<?= base_url('uploads/settings/' . $settings['site_logo']) ?>" height="30" alt="Logo" class="me-2">
+                            <img src="<?= base_url('uploads/settings/' . $settings['site_logo']) ?>" alt="Logo" class="me-2" style="max-height: 30px; width: auto;">
                         <?php endif; ?>
                         <?= esc($settings['nama_tpu'] ?? $settings['site_title'] ?? 'SI-MAKAM') ?>
                     </h4>
