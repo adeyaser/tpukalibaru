@@ -343,7 +343,11 @@
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">
-            <i class="bi bi-tree-fill text-white fs-3"></i>
+            <?php if (get_setting('site_logo')): ?>
+                <img src="<?= base_url('uploads/settings/' . get_setting('site_logo')) ?>" alt="Logo" style="max-height: 30px; width: auto;">
+            <?php else: ?>
+                <i class="bi bi-tree-fill text-white fs-3"></i>
+            <?php endif; ?>
             <h4><?= get_setting('nama_tpu') ?: get_setting('site_title') ?: 'SI-MAKAM' ?></h4>
         </div>
         
